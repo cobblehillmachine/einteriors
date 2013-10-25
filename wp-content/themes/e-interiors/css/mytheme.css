@@ -1,0 +1,76 @@
+body {margin:0; padding:0; width:100%; min-width:1280px; font-family: "adobe-caslon-pro",serif; font-style: normal; font-weight: 400; font-size:16px; background:#372e21; letter-spacing:1.5px;}
+a {text-decoration:none; color:#bdb6a2; outline:0;}
+a img {border:0;}
+ul {list-style:none; padding:0; margin:0;}
+input {-webkit-appearance:none;}
+p {margin:0 0 20px 0; display:inline-block;}
+ul, li, ol, fieldset {list-style:none; padding:0; margin:0; border:none;}
+input, select, textarea {-webkit-appearance:none; -webkit-border-radius:0px; font-size:12px; text-transform:uppercase; border:none; background:#fff; padding:0 20px 0 20px; resize:none; float:left; width:100%; height:58px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+input[type="checkbox"] {-webkit-appearance:checkbox;}
+input[type="radio"] {-webkit-appearance:radio;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+::-webkit-input-placeholder {color: #86837e; opacity:1; filter:alpha(opacity=100);}
+:-moz-placeholder {color: #86837e; opacity:1; filter:alpha(opacity=100);}
+::-moz-placeholder {color: #86837e; opacity:1; filter:alpha(opacity=100);}
+:-ms-input-placeholder {color: #86837e; opacity:1; filter:alpha(opacity=100);}
+
+/*REUSABLE*/
+.mid-cont {position:relative; width:1000px; margin:auto;}
+.hidden {display:none;}
+.last {margin-right:0;}
+#header, #footer, .container, #sidebar {float:left; width:100%;}
+#main {background:#e8e5e2; padding:60px 0 30px 0;}
+#banner {text-align:center; margin-top:4px;}
+#banner img {float:left; width:100%; height:auto; min-width:1000px;}
+#banner .page-title {width:100%; background:url(../images/banner-title.png) repeat; height:85px; position:absolute; left:0; top:682px; color:#e8e5e2; font-size:20px; padding-top:55px;}
+input[type="submit"], #about-info a {background:#5d6a78; color:#e8e5e2; font-size:12px; width:185px; text-align:center; padding:22px 0; float:left;}
+
+/*HOVERS*/
+#header #nav li a:hover, #header #nav .current-menu-item a, #contact-info a {color:#5d6a78;}
+#footer a:hover {color:#5e594b;}
+#about-info a:hover, input[type="submit"]:hover {background:#372e21;}
+
+/*FONTS*/
+.proxi-cond-semibold {font-family: "proxima-nova-condensed",sans-serif; font-style: normal; font-weight: 600; text-transform:uppercase; }
+.proxi-semibold, #header #nav li a, #footer h3, #copyright, #contact-info p strong {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 600; text-transform:uppercase; letter-spacing:2px;}
+.proxi-light, #about-info a, #banner .page-title, input, textarea {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 300; text-transform:uppercase;}
+
+/*HEADER*/
+#header {background:url(../images/greek.png) repeat-x bottom left #e8e5e2; height:190px;}
+#header #logo {float:left; background:url(../images/logo.png) no-repeat; width:300px; height:120px; margin-top:40px;}
+#header #logo:hover {background:url(../images/logo-hover.png) no-repeat;}
+#header #nav {float:right; margin-top:75px;}
+#header #nav li {float:left; margin-left:40px;}
+#header #nav li a {font-size:16px; color:#363636;}
+
+
+
+/*FOOTER*/
+#footer {height:315px; background:url(../images/footer-lines.png) repeat-x 0 168px; color:#bdb6a2; text-align:center;}
+#footer #sidebar {background:url(../images/footer-star.png) no-repeat center 75px;}
+#footer aside {float:left; margin-top:60px; width:50%;}
+#footer h3 {margin:0; font-size:18px;}
+#footer .textwidget {font-size:20px; font-style:italic;}
+#footer #social {display:inline-block; margin-top:70px;}
+#footer #social .social-icon {float:left; width:20px; height:19px; background:url(../images/social-icons.png) no-repeat; margin-right:40px;}
+#footer #social #facebook:hover {background-position:0 -19px;}
+#footer #social #pinterest {margin-right:0; background-position:-52px 0;}
+#footer #social #pinterest:hover {background-position:-52px -19px;}
+#footer #copyright {font-size:14px; margin-top:40px;}
+
+/*HOMEPAGE*/
+
+/*ABOUT*/
+#about-info {float:left; width:580px; line-height:22px; color:#53504c;}
+#about-img {float:right; width:374px;}
+#about-img img {width:100%; height:auto;}
+
+/*CONTACT*/
+#contact-info p {width:50%; float:left; text-align:center; font-style:italic; font-weight:600; font-size:20px; color:#5d6a78;}
+#contact-info p strong {font-size:24px; color:#363636; text-transform:uppercase; border-bottom:3px solid #363636; padding-bottom:5px; display:inline-block; margin-bottom:15px;}
+#contact-info a:hover {color:#372e21;}
+#contact-form {background:#363636; padding:55px 0 20px 0;}
+#contact-form .wpcf7-form-control-wrap {width:325px; margin:0 12px 12px 0; float:left;}
+#contact-form .wpcf7-form-control-wrap:nth-child(3) {margin-right:0;}
+#contact-form .wpcf7-form-control-wrap:nth-child(4), #contact-form textarea {width:100%; height:175px;}
+#contact-form textarea {padding-top:25px;}
