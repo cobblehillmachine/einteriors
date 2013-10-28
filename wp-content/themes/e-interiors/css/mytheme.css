@@ -17,23 +17,24 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appe
 /*REUSABLE*/
 .mid-cont {position:relative; width:1000px; margin:auto;}
 .hidden {display:none;}
-.last {margin-right:0;}
+.last, .gallery-cont .project:nth-child(4n+4), .gallery-cont .product:nth-child(4n+4), #shop-categories #cat-cont .cat-item:last-child {margin-right:0;}
 #header, #footer, .container, #sidebar {float:left; width:100%;}
 #main {background:#e8e5e2; padding:60px 0 30px 0;}
 #banner {text-align:center; margin-top:4px;}
 #banner img {float:left; width:100%; height:auto; min-width:1000px;}
-#banner .page-title {width:100%; background:url(../images/banner-title.png) repeat; height:85px; position:absolute; left:0; top:682px; color:#e8e5e2; font-size:20px; padding-top:55px;}
-input[type="submit"], #about-info a {background:#5d6a78; color:#e8e5e2; font-size:12px; width:185px; text-align:center; padding:22px 0; float:left;}
+#banner .page-title {width:100%; background:url(../images/banner-title.png) repeat; height:85px; position:absolute; left:0; top:682px; color:#e8e5e2; font-size:20px; padding-top:55px; min-width:1280px;}
+input[type="submit"], #about-info a, #contact-form .wpcf7-response-output, .button {background:#5d6a78; color:#e8e5e2; font-size:12px; width:185px; text-align:center; padding:22px 0; float:left; cursor:pointer;}
+.overlay {display:none; position:absolute; width:100%; left:0; top:0; background:#363636; opacity:.8; filter:alpha(opacity=80); z-index:100;}
 
 /*HOVERS*/
 #header #nav li a:hover, #header #nav .current-menu-item a, #contact-info a {color:#5d6a78;}
 #footer a:hover {color:#5e594b;}
-#about-info a:hover, input[type="submit"]:hover {background:#372e21;}
+#about-info a:hover, input[type="submit"]:hover, .button:hover {background:#372e21;}
 
 /*FONTS*/
-.proxi-cond-semibold {font-family: "proxima-nova-condensed",sans-serif; font-style: normal; font-weight: 600; text-transform:uppercase; }
-.proxi-semibold, #header #nav li a, #footer h3, #copyright, #contact-info p strong {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 600; text-transform:uppercase; letter-spacing:2px;}
-.proxi-light, #about-info a, #banner .page-title, input, textarea {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 300; text-transform:uppercase;}
+.proxi-cond-semibold, .gallery-cont .project-title span, .product-overlay .product-title {font-family: "proxima-nova-condensed",sans-serif; font-style: normal; font-weight: 600; text-transform:uppercase; }
+.proxi-semibold, #header #nav li a, #footer h3, #copyright, #contact-info p strong, #shop-title, .product-overlay .info {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 600; text-transform:uppercase; letter-spacing:2px;}
+.proxi-light, #about-info a, #banner .page-title, input, textarea, #contact-form .wpcf7-response-output, .button {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 300; text-transform:uppercase;}
 
 /*HEADER*/
 #header {background:url(../images/greek.png) repeat-x bottom left #e8e5e2; height:190px;}
@@ -42,8 +43,6 @@ input[type="submit"], #about-info a {background:#5d6a78; color:#e8e5e2; font-siz
 #header #nav {float:right; margin-top:75px;}
 #header #nav li {float:left; margin-left:40px;}
 #header #nav li a {font-size:16px; color:#363636;}
-
-
 
 /*FOOTER*/
 #footer {height:315px; background:url(../images/footer-lines.png) repeat-x 0 168px; color:#bdb6a2; text-align:center;}
@@ -74,3 +73,41 @@ input[type="submit"], #about-info a {background:#5d6a78; color:#e8e5e2; font-siz
 #contact-form .wpcf7-form-control-wrap:nth-child(3) {margin-right:0;}
 #contact-form .wpcf7-form-control-wrap:nth-child(4), #contact-form textarea {width:100%; height:175px;}
 #contact-form textarea {padding-top:25px;}
+#contact-form span.wpcf7-not-valid-tip {display:none !important;}
+#contact-form .wpcf7-response-output {background:#b3a56d; border:0; position:absolute; width:800px; margin:0; right:0; top:257px; text-transform:uppercase;}
+#contact-form .wpcf7-mail-sent-ok {background:#5d786f;}
+
+/*PROJECTS and SHOP*/
+.gallery-cont {background:#363636; padding:55px 0 45px 0;}
+.gallery-cont .project, .gallery-cont .product {float:left; margin:0 10px 10px 0; height:250px; width:242px;}
+.gallery-cont .project img, .gallery-cont .product img {width:100%; height:100%;}
+.gallery-cont .project-title {display:none; position:absolute; width:242px; height:250px; background:url(../images/project-hover.png); margin-top:-262px; text-align:center;}
+.gallery-cont .project:hover .project-title, .gallery-cont .product:hover .project-title {display:block;}
+.gallery-cont .project-title .cont {display:table-cell; vertical-align:middle; width:242px; height:250px; }
+.gallery-cont .project-title .cont span {border-bottom:3px solid #363636; padding-bottom:3px; color:#363636; font-size:18px; text-transform:uppercase; max-width:115px; display:inline-block;}
+#shop-cont .project-title {background:url(../images/shop-hover.png); cursor:pointer;}
+#shop-title {color:#e8e5da; font-size:22px; text-transform:uppercase; background:#5d6a78; padding:30px 0; width:100%; text-align:center; float:left; margin-bottom:30px;}
+#shop-title p {margin:0;}
+
+#shop-categories {text-align:center; margin-bottom:25px;}
+#shop-categories #cat-cont {display:inline-block;}
+#shop-categories #cat-cont .cat-item {float:left; margin-right:25px; font:normal 13px "proxima-nova"; text-transform:uppercase; color:#747372; padding:10px 15px; border:2px solid transparent; cursor:pointer;}
+#shop-categories #cat-cont .cat-item:hover {border-color:#fff;}
+
+/*PROJECTS LIGHTBOX*/
+#lightbox #outerImageContainer {background:#e8e5e2;}
+#lightbox #imageDataContainer {background:transparent; margin-left:650px; position:absolute; top:0; margin-top:-100px; right:0;}
+#lightbox #imageDataContainer #imageDetails {display:none;}
+#lightbox #prevLink, #lightbox #prevLink:hover, #lightbox #prevLink:visited:hover {background:url(../images/lightbox-prev.png) no-repeat 0 center; margin-left:-100px;}
+#lightbox #nextLink, #lightbox #nextLink:hover, #lightbox #nextLink:visited:hover {background:url(../images/lightbox-next.png) no-repeat right center; margin-right:-100px;}
+#lightbox #jqlb_closelabel {background:url(../images/lightbox-close.png) no-repeat; width:26px; height:25px;}
+
+/*SHOP LIGHTBOX*/
+.product-overlay {display:none; position:absolute; z-index:1000; background:#fff; width:870px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding:15px; margin-left:65px;}
+.product-overlay img {float:left; width:375px; height:auto;}
+.product-overlay .info-cont {float:right; width:380px; margin:45px 55px 0 0;}
+.product-overlay .product-title {font-size:25px; color:#363636;text-transform:uppercase; border-bottom:3px solid #363636; padding-bottom:5px; float:left; width:100%; margin-bottom:40px;}
+.product-overlay .info {font-size:13px; color:#6f6c66; float:left; width:100%; margin-bottom:30px;}
+.product-overlay #close {position:absolute; top:15px; right:15px; background:url(../images/close.png) no-repeat; width:26px; height:25px; cursor:pointer;}
+
+

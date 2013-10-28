@@ -262,3 +262,43 @@ if( class_exists( 'kdMultipleFeaturedImages' ) ) {
 
         new kdMultipleFeaturedImages( $args );
 }
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+
+	$args1 = array(
+		'labels' => array(
+			'name' => __( 'Projects' ),
+			'singular_name' => __( 'Project' )
+		),
+		'public' => true,
+		//'has_archive' => true,
+		'rewrite' => array('slug' => 'projects'),
+		'supports' => array( 'title', 'thumbnail' )
+	);
+  
+  	register_post_type( 'Projects', $args1);
+
+	$args2 = array(
+		'labels' => array(
+			'name' => __( 'Products' ),
+			'singular_name' => __( 'Product' )
+		),
+		'public' => true,
+		//'has_archive' => true,
+		'rewrite' => array('slug' => 'shop'),
+		'supports' => array( 'title', 'thumbnail' )
+	);
+  
+  	register_post_type( 'Products', $args2);
+	//register_taxonomy_for_object_type('post_tag', 'offerings');
+	register_taxonomy_for_object_type('category', 'products');
+
+	// register_taxonomy_for_object_type('post_tag', 'page');
+	//register_taxonomy_for_object_type('category', 'page');
+}
+
+if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'project-thumb', 245, 250, true ); //300 pixels wide (and unlimited height)
+	add_image_size( 'project-big', 700, 9999 ); 
+}
