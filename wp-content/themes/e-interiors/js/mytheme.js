@@ -65,6 +65,8 @@ function selectCat() {
 			$('#products-cont .product').each(function() {
 				if ($(this).hasClass(id)) {
 					$(this).fadeIn();
+					$(this).css({'margin-right':10+'px'});
+					
 				} else {
 					$(this).hide();
 				}
@@ -74,6 +76,7 @@ function selectCat() {
 	$('#view-all').click(function() {
 		$('#products-cont .product').each(function() {
 			$(this).fadeIn();
+			$('#products-cont .product:nth-child(4n+4)').css({'margin-right':0+'px'});
 		});
 	});
 }
@@ -101,7 +104,7 @@ function customSlideshow() {
 			//get the right position            
 			var left_indent = parseInt($('#slides .slides-cont').css('left')) + item_width;
 			//slide the item            
-			$('#slides .slides-cont').animate({'left' : left_indent}, 1500, 'easeInOutSine', function () {    
+			$('#slides .slides-cont').animate({'left' : left_indent}, 1500,  function () {    
 	            //move the last item and put it as first item            	
 				$('#slides img:first').before($('#slides img:last'));           
 				//set the default item to correct position
@@ -117,7 +120,7 @@ function customSlideshow() {
 			//get the right position
 			var left_indent = parseInt($('#slides .slides-cont').css('left')) - item_width;
 			//slide the item
-			$('#slides .slides-cont').animate({'left' : left_indent}, 1500, 'easeInOutSine', function () {
+			$('#slides .slides-cont').animate({'left' : left_indent}, 1500,  function () {
 	            //move the first item and put it as last item
 				$('#slides img:last').after($('#slides img:first'));                 	
 				//set the default item to correct position
