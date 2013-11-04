@@ -16,9 +16,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appe
 
 /*REUSABLE*/
 .mid-cont {position:relative; width:1000px; margin:auto;}
-.hidden {display:none;}
-.last, .gallery-cont .project:nth-child(4n+4), .gallery-cont .product:nth-child(4n+4), #shop-categories #cat-cont .cat-item:last-child {margin-right:0;}
-#header, #footer, .container, #sidebar {float:left; width:100%;}
+.hidden, #carousel .bx-pager {display:none;}
+.last, .gallery-cont .project:nth-child(4n+4), #shop-categories #cat-cont .cat-item:last-child {margin-right:0;}
+#header, #footer, .container, #sidebar {float:left; width:100%; display:none;}
 #main {background:#e8e5e2; padding:60px 0 30px 0;}
 #banner {text-align:center; margin-top:4px;}
 #banner img {float:left; width:100%; height:auto; min-width:1000px;}
@@ -77,11 +77,11 @@ input[type="submit"], #about-info a, #contact-form .wpcf7-response-output, .butt
 
 /*PROJECTS and SHOP*/
 .gallery-cont {background:#363636; padding:55px 0 45px 0;}
-.gallery-cont .project, .gallery-cont .product {float:left; margin:0 10px 10px 0; height:250px; width:242px;}
+.gallery-cont .project, .gallery-cont .product {float:left; margin:0 0 10px 0; height:255px; width:250px; padding:0 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .gallery-cont .project img, .gallery-cont .product img {width:100%; height:100%;}
-.gallery-cont .project-title {display:none; position:absolute; width:242px; height:250px; background:url(../images/project-hover.png); margin-top:-262px; text-align:center;}
+.gallery-cont .project-title {display:none; position:absolute; width:240px; height:256px; background:url(../images/project-hover.png); margin-top:-267px; text-align:center;}
 .gallery-cont .project:hover .project-title, .gallery-cont .product:hover .project-title {display:block;}
-.gallery-cont .project-title .cont {display:table-cell; vertical-align:middle; width:242px; height:250px; }
+.gallery-cont .project-title .cont {display:table-cell; vertical-align:middle; width:242px; height:256px; }
 .gallery-cont .project-title .cont span {border-bottom:3px solid #363636; padding-bottom:3px; color:#363636; font-size:18px; text-transform:uppercase; max-width:115px; display:inline-block;}
 #shop-cont .project-title {background:url(../images/shop-hover.png); cursor:pointer;}
 #shop-title {color:#e8e5da; font-size:22px; text-transform:uppercase; background:#5d6a78; padding:30px 0; width:100%; text-align:center; float:left; margin-bottom:30px;}
@@ -90,9 +90,10 @@ input[type="submit"], #about-info a, #contact-form .wpcf7-response-output, .butt
 #shop-categories {text-align:center; margin-bottom:25px;}
 #shop-categories #cat-cont {display:inline-block;}
 #shop-categories #cat-cont .cat-item {float:left; margin-right:25px; font:normal 13px "proxima-nova"; text-transform:uppercase; color:#747372; padding:10px 15px; border:2px solid transparent; cursor:pointer;}
-#shop-categories #cat-cont .cat-item:hover {border-color:#fff;}
+#shop-categories #cat-cont .cat-item:hover, #shop-categories #cat-cont .selected {border-color:#fff; color:#fff;}
 
 /*PROJECTS LIGHTBOX*/
+/*#lightbox {top:115px !important;}*/
 #lightbox #outerImageContainer {background:#e8e5e2;}
 #lightbox #imageDataContainer {background:transparent; margin-left:650px; position:absolute; top:0; margin-top:-100px; right:0;}
 #lightbox #imageDataContainer #imageDetails {display:none;}
@@ -112,12 +113,33 @@ input[type="submit"], #about-info a, #contact-form .wpcf7-response-output, .butt
 #carousel {width:100%; height:525px; margin:0 auto;overflow:hidden; padding-top:10px;}
 #carousel #slides {overflow:hidden; position:relative; width:1000%; height:525px;}
 #carousel #slides .slides-cont {position:relative; left:0; top:0; margin:0; padding:0; width:100%;}
-#carousel #slides img {width:auto; height:525px; float:left; margin-right:10px;}
-#carousel #buttons {position:absolute; z-index:100; width:70px; height:45px; background:url(../images/buttons-bg.png); top:480px; left:445px; padding:0 25px;}
-#carousel #buttons .control {float:left; width:14px; height:14px; margin-top:18px;}
-#carousel #buttons a#prev {background:url(../images/slider-arrows.png) 0 0 no-repeat; }
-#carousel #buttons a#next {background:url(../images/slider-arrows.png) -38px 0 no-repeat; cursor:pointer;}
-#carousel #buttons #play {background:url(../images/slider-play.png) 0 -14px no-repeat; margin:18px 10px 0 15px; cursor:pointer;}
-/*#carousel #buttons #play:hover {background-position:0 0;}*/
-/*a#prev:hover {background:url(../images/lightbox-next.png) 0 0 no-repeat;}
-a#next:hover {background:url(../images/lightbox-next.png) -32px 0 no-repeat;}*/
+#carousel #slides img {width:auto !important; height:525px; float:left; margin-right:10px;}
+#carousel .bx-controls {position:absolute; z-index:100; width:70px; height:45px; background:url(../images/buttons-bg.png); top:480px; padding:0 25px;}
+#carousel .bx-wrapper .bx-controls-direction a {height:18px; width:15px; margin-top:-6px;}
+#carousel .bx-wrapper .bx-prev {background:url(../images/slider-arrows.png) 0 0 no-repeat; }
+#carousel .bx-wrapper .bx-next {background:url(../images/slider-arrows.png) -38px 0 no-repeat; cursor:pointer;}
+#carousel #slides .bx-wrapper {max-width:100% !important;}
+#carousel #slides .bx-wrapper .bx-viewport {border:none; box-shadow:none; background:none; left:0;}
+#carousel #play {background:url(../images/slider-play.png) 0 -14px no-repeat; margin:18px 10px 0 28px; cursor:pointer; width:14px; height:14px;}
+
+@media screen and (max-device-width: 480px) { 
+	body {min-height:1200px;}
+	#banner, #banner img {height:480px !important;}
+	#banner .page-title {margin-top:-148px !important;}
+	.gallery-cont .project-title {height:251px; width:243px; margin-left:-1px;}
+	#lightbox {top:40px !important; text-align:center; left:100px !important;}
+	#outerImageContainer, #imageContainer {display:inline-block !important; max-width:720px !important; height:auto !important;}
+	#lightboxImage {max-width:700px !important; height:auto !important;}
+	.overlay {width:1050px !important;}
+}
+
+@media screen and (max-device-width: 1024px) { 
+	body {min-height:1300px;}
+	#banner, #banner img {height:480px !important;}
+	#banner .page-title {margin-top:-148px !important;}
+	.gallery-cont .project-title {height:257px; width:242px; margin-left:-1px;}
+	#lightbox {left:115px !important; top:130px !important;}
+	#outerImageContainer, #imageContainer {display:inline-block !important; max-width:720px !important; height:auto !important;}
+	#lightboxImage {max-width:700px !important; height:auto !important;}
+	.overlay {width:1050px !important;}
+}

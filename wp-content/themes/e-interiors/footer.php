@@ -16,8 +16,8 @@
 			<div class="mid-cont">
 				<?php get_sidebar(); ?>
 				<div id="social">
-					<a id="facebook" class="social-icon" target="_blank" href="#"></a>
-					<a id="pinterest" class="social-icon" target="_blank" href="#"></a>
+					<a id="facebook" class="social-icon" target="_blank" href="https://www.facebook.com/pages/E-Interiors-Interior-Design/137912659732580"></a>
+					<a id="pinterest" class="social-icon" target="_blank" href="http://www.pinterest.com/carypeter/"></a>
 				</div>
 				<div id="copyright">&copy; 2013 E Interiors, all rights reserved</div>
 			</div>

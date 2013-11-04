@@ -3,7 +3,7 @@
 <div class="container">
 	<!-- <div class="mid-cont"> -->
 		<div id="carousel">
-			<div class="mid-cont">
+			<!-- <div class="mid-cont">
 				<div id="buttons">
 					<a href="#" id="prev" class="control"></a>
 					<div id="play" class="control"></div>
@@ -11,7 +11,7 @@
 				</div>
 			</div>
 	
-			<div class="clear"></div>
+			<div class="clear"></div> -->
 
 			<div id="slides"> 
 				<div class="slides-cont">
