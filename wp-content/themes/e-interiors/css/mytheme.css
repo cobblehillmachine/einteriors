@@ -93,25 +93,27 @@ input[type="submit"], #about-info a, #contact-form .wpcf7-response-output, .butt
 #shop-categories #cat-cont .cat-item:hover, #shop-categories #cat-cont .selected {border-color:#fff; color:#fff;}
 
 /*PROJECTS LIGHTBOX*/
-/*#lightbox {top:115px !important;}*/
-#lightbox #outerImageContainer {background:#e8e5e2;}
-#lightbox #imageDataContainer {background:transparent; margin-left:650px; position:absolute; top:0; margin-top:-100px; right:0;}
-#lightbox #imageDataContainer #imageDetails {display:none;}
-#lightbox #prevLink, #lightbox #prevLink:hover, #lightbox #prevLink:visited:hover {background:url(../images/lightbox-prev.png) no-repeat 0 center; margin-left:-100px;}
-#lightbox #nextLink, #lightbox #nextLink:hover, #lightbox #nextLink:visited:hover {background:url(../images/lightbox-next.png) no-repeat right center; margin-right:-100px;}
-#lightbox #jqlb_closelabel {background:url(../images/lightbox-close.png) no-repeat; width:26px; height:25px;}
+#fancybox-wrap #fancybox-right-ico, #fancybox-wrap #fancybox-left-ico {display:none;}
+#fancybox-wrap #fancybox-left, #fancybox-wrap #fancybox-left:hover {background:url(../images/lightbox-prev.png) no-repeat 0 center; margin-left:-100px;}
+#fancybox-wrap #fancybox-right, #fancybox-wrap #fancybox-right:hover {background:url(../images/lightbox-next.png) no-repeat right center; margin-right:-100px;}
+#fancybox-wrap #fancybox-close {background:url(../images/lightbox-close.png) no-repeat; width:26px; height:25px; margin:-20px 15px 0 0;}
+#fancybox-overlay {background:#363636 !important; opacity:.8 !important; filter:alpha(opacity=80);}
 
 /*SHOP LIGHTBOX*/
-.product-overlay {display:none; position:absolute; z-index:1000; background:#fff; width:870px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding:15px; margin-left:65px;}
-.product-overlay img {float:left; width:375px; height:auto;}
+.product-overlay {display:none; position:absolute; z-index:1000; background:#fff; width:870px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding:15px; left:65px;}
+.product-overlay img {float:left; width:375px !important; height:auto !important;}
 .product-overlay .info-cont {float:right; width:380px; margin:45px 55px 0 0;}
 .product-overlay .product-title {font-size:25px; color:#363636;text-transform:uppercase; border-bottom:3px solid #363636; padding-bottom:5px; float:left; width:100%; margin-bottom:40px;}
 .product-overlay .info {font-size:13px; color:#6f6c66; float:left; width:100%; margin-bottom:30px;}
 .product-overlay #close {position:absolute; top:15px; right:15px; background:url(../images/close.png) no-repeat; width:26px; height:25px; cursor:pointer;}
+/*#products-cont .product:nth-child(4n+1) .product-overlay {margin-left:60px;}
+#products-cont .product:nth-child(4n+2) .product-overlay {margin-left:-190px;}
+#products-cont .product:nth-child(4n+3) .product-overlay {margin-left:-440px;}
+#products-cont .product:nth-child(4n+4) .product-overlay {margin-left:-690px;}*/
 
 /*HOME SLIDER*/
 #carousel {width:100%; height:525px; margin:0 auto;overflow:hidden; padding-top:10px;}
-#carousel #slides {overflow:hidden; position:relative; width:1000%; height:525px;}
+#carousel #slides {overflow:hidden; position:relative; width:100%; height:525px;}
 #carousel #slides .slides-cont {position:relative; left:0; top:0; margin:0; padding:0; width:100%;}
 #carousel #slides img {width:auto !important; height:525px; float:left; margin-right:10px;}
 #carousel .bx-controls {position:absolute; z-index:100; width:70px; height:45px; background:url(../images/buttons-bg.png); top:480px; padding:0 25px;}
@@ -120,7 +122,8 @@ input[type="submit"], #about-info a, #contact-form .wpcf7-response-output, .butt
 #carousel .bx-wrapper .bx-next {background:url(../images/slider-arrows.png) -38px 0 no-repeat; cursor:pointer;}
 #carousel #slides .bx-wrapper {max-width:100% !important;}
 #carousel #slides .bx-wrapper .bx-viewport {border:none; box-shadow:none; background:none; left:0;}
-#carousel #play {background:url(../images/slider-play.png) 0 -14px no-repeat; margin:18px 10px 0 28px; cursor:pointer; width:14px; height:14px;}
+#carousel #play, #carousel #pause {background:url(../images/slider-play.png) 0 -14px no-repeat; margin:18px 10px 0 28px; cursor:pointer; width:14px; height:14px;}
+#carousel #pause {display:none; background-position:0 0;}
 
 @media screen and (max-device-width: 480px) { 
 	body {min-height:1200px;}

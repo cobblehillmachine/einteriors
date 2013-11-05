@@ -30,11 +30,12 @@ $(document).ready(function() {
 	bannerH();
 	setInputFieldFunctions();
 	showProducts();
+	centerShopOverlay();
 	closeOverlay();
 	//customSlideshow();
 	selectCat();
 	//lightboxFix();
-	centerItem('.product-overlay', 1000, 500);
+	//centerItem('.product-overlay', 1000, 500);
 	$('#slides .slides-cont').bxSlider({
 	    slideWidth: 800,
 	    minSlides: 2,
@@ -45,7 +46,9 @@ $(document).ready(function() {
 	  });
 	centerButton('#carousel .bx-controls', 95);
 	$('#carousel .bx-wrapper .bx-prev').after('<div id="play" class="control"></div>');
-	startSlider();
+	$('#carousel .bx-wrapper .bx-prev').after('<div id="pause" class="control"></div>');
+	var speed = 3000;
+	run = setInterval('rotate()', speed);
 	sliderControls();
 
 });
@@ -54,8 +57,9 @@ $(window).resize(function() {
 	bannerH();
 	var winH = $(document).height();
 	$('.overlay').css({'height':winH});
-	centerItem('.product-overlay', 1000, 500);
+	//centerItem('.product-overlay', 1000, 500);
 	centerButton('#carousel .bx-controls', 95);
+	centerShopOverlay();
 });
 
 $(window).load(function() {
@@ -104,6 +108,18 @@ function showProducts() {
 		})
 	});
 
+
+}
+
+function centerShopOverlay() {
+	$('.product-overlay').each(function() {
+		winH = $(window).height();
+		imgH = $(this).height();
+		h = winH - (imgH/2);
+		$(this).css({'height':imgH+30});
+		$(this).css({'top':(h/2) - 380});
+	});
+ 	
 }
 
 function selectCat() {
@@ -153,7 +169,7 @@ function loadAfterImagesLoaded() {
 
 function centerItem(item,iWidth,iHeight){  
    windowWidth = $(window).width();
-   windowHeight = $(window).height();
+   windowHeight = $(document).height();
    var w = windowWidth - iWidth; 
    var h = windowHeight - iHeight;
    $(item).css({
@@ -170,17 +186,16 @@ function centerButton(item,iWidth){
    });   
 }
 
-function startSlider() {
-	var speed = 3000;
-	run = setInterval('rotate()', speed);
-	$('#carousel #play').css({'background-position':'0 -14px'}); 
-	$('#carousel #play').addClass('play'); $('#carousel #play').removeClass('pause');
-	$('#carousel #play').removeAttr('onclick', 'startSlider();');
-}
 
 function sliderControls() {
-	$('#carousel #play.play').on({
-		click:function(){clearInterval(run); $(this).css({'background-position':'0 0'}); $(this).addClass('pause'); $(this).removeClass('play'); $(this).attr('onclick', 'startSlider();');}
+	$('#carousel #play').on({
+		click:function(){clearInterval(run); $(this).css({'display':'none'}); $('#carousel #pause').css({'display':'block'});}
+		
+	});
+	$('#carousel #pause').on({
+		
+		click:function(){var speed = 3000; run = setInterval('rotate()', speed); $(this).css({'display':'none'}); $('#carousel #play').css({'display':'block'});}
 		
 	});
 }
+
