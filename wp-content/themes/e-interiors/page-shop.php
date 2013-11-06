@@ -30,7 +30,7 @@
 		
 					<div class="product-overlay <?php echo strtolower(str_replace(' ','-',get_the_title())); ?>">
 						<div id="close" onclick="closeOverlay();"></div>
-						<?php the_post_thumbnail('project-big'); ?>
+						<div class="overlay-img"><?php the_post_thumbnail('project-big'); ?></div>
 						<div class="info-cont">
 							<div class="product-title"><?php the_title(); ?></div>
 							<div class="info">email or call for pricing and availability</div>

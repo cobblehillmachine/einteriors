@@ -30,7 +30,11 @@ $(document).ready(function() {
 	bannerH();
 	setInputFieldFunctions();
 	showProducts();
-	centerShopOverlay();
+	$('.product-overlay').each(function() {
+		imgH = $(this).height();
+		centerShopOverlay('.product-overlay', 900, imgH);
+	});
+	
 	closeOverlay();
 	//customSlideshow();
 	selectCat();
@@ -59,7 +63,10 @@ $(window).resize(function() {
 	$('.overlay').css({'height':winH});
 	//centerItem('.product-overlay', 1000, 500);
 	centerButton('#carousel .bx-controls', 95);
-	centerShopOverlay();
+	$('.product-overlay').each(function() {
+		imgH = $(this).height();
+		centerShopOverlay('.product-overlay', 900, imgH);
+	});
 });
 
 $(window).load(function() {
@@ -111,15 +118,26 @@ function showProducts() {
 
 }
 
-function centerShopOverlay() {
-	$('.product-overlay').each(function() {
-		winH = $(window).height();
-		imgH = $(this).height();
-		h = winH - (imgH/2);
-		$(this).css({'height':imgH+30});
-		$(this).css({'top':(h/2) - 380});
-	});
- 	
+// function centerShopOverlay() {
+// 	$('.product-overlay').each(function() {
+// 		winH = $(window).height();
+// 		imgH = $(this).height();
+// 		h = winH - imgH;
+// 		$(this).css({'height':imgH+30});
+// 		$(this).css({'top':(h/2) - 190});
+// 	});
+//  	
+// }
+
+function centerShopOverlay(item,iWidth,iHeight){  
+   windowWidth = $(window).width();
+   windowHeight = $(window).height();
+   var w = windowWidth - iWidth; 
+   var h = windowHeight - iHeight;
+   $(item).css({
+       'left': (w/2) +15,
+       'top':h/2
+   });   
 }
 
 function selectCat() {

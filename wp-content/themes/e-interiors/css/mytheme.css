@@ -100,8 +100,9 @@ input[type="submit"], #about-info a, #contact-form .wpcf7-response-output, .butt
 #fancybox-overlay {background:#363636 !important; opacity:.8 !important; filter:alpha(opacity=80);}
 
 /*SHOP LIGHTBOX*/
-.product-overlay {display:none; position:absolute; z-index:1000; background:#fff; width:870px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding:15px; left:65px;}
-.product-overlay img {float:left; width:375px !important; height:auto !important;}
+.product-overlay {display:none; position:fixed; z-index:1000; background:#fff; width:870px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding:15px; left:65px;}
+.product-overlay .overlay-img {float:left; width:375px; text-align:center;}
+.product-overlay .overlay-img img {display:inline-block; max-width:100% !important; max-height:375px !important;}
 .product-overlay .info-cont {float:right; width:380px; margin:45px 55px 0 0;}
 .product-overlay .product-title {font-size:25px; color:#363636;text-transform:uppercase; border-bottom:3px solid #363636; padding-bottom:5px; float:left; width:100%; margin-bottom:40px;}
 .product-overlay .info {font-size:13px; color:#6f6c66; float:left; width:100%; margin-bottom:30px;}
