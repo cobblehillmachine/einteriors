@@ -12,7 +12,7 @@
 				
 					<a class="project" rel="lightbox" href="<?php echo $thumbnail; ?>">
 						<?php the_post_thumbnail('project-thumb'); ?>
-						<div class="project-title"><div class="cont"><span><?php the_title(); ?></span></div></div>
+						<!-- <div class="project-title"><div class="cont"><span><?php the_title(); ?></span></div></div> -->
 					</a>
 				
 			<?php endwhile; wp_reset_postdata(); ?>

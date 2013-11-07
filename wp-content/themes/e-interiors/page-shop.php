@@ -3,7 +3,7 @@
 	<div id="shop-cont" class="gallery-cont container">
 		<div class="mid-cont">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<div id="shop-title"><?php the_content(); ?></div>
+				<!-- <div id="shop-title"><?php the_content(); ?></div> -->
 			<?php endwhile; wp_reset_postdata(); ?>
 			
 			<div id="shop-categories" class="container">
