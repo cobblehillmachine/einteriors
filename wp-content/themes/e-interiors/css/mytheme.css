@@ -146,4 +146,6 @@ input[type="submit"], #about-info a, #contact-form .wpcf7-response-output, .butt
 	#outerImageContainer, #imageContainer {display:inline-block !important; max-width:720px !important; height:auto !important;}
 	#lightboxImage {max-width:700px !important; height:auto !important;}
 	.overlay {width:1050px !important;}
+	#fancybox-overlay {width:1050px !important;}
+	#fancybox-wrap {left:175px !important;}
 }
