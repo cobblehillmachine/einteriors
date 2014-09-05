@@ -51,10 +51,12 @@ input[type="submit"], #about-info a, #contact-form .wpcf7-response-output, .butt
 #footer h3 {margin:0; font-size:18px;}
 #footer .textwidget {font-size:20px; font-style:italic;}
 #footer #social {display:inline-block; margin-top:70px;}
-#footer #social .social-icon {float:left; width:20px; height:19px; background:url(../images/social-icons.png) no-repeat; margin-right:40px;}
+#footer #social .social-icon {float:left; width:20px; height:19px; background:url(../images/social-icons-2.png) no-repeat; margin-right:40px;}
 #footer #social #facebook:hover {background-position:0 -19px;}
-#footer #social #pinterest {margin-right:0; background-position:-52px 0;}
+#footer #social #pinterest {margin-right:40px; background-position:-52px 0;}
 #footer #social #pinterest:hover {background-position:-52px -19px;}
+#footer #social #houzz {margin-right:0; background-position:-109px 0;}
+#footer #social #houzz:hover {background-position:-109px -19px;}
 #footer #copyright {font-size:14px; margin-top:40px;}
 
 /*ABOUT*/

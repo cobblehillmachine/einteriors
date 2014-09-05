@@ -18,6 +18,7 @@
 				<div id="social">
 					<a id="facebook" class="social-icon" target="_blank" href="https://www.facebook.com/pages/E-Interiors-Interior-Design/137912659732580"></a>
 					<a id="pinterest" class="social-icon" target="_blank" href="http://www.pinterest.com/carypeter/"></a>
+					<a id="houzz" class="social-icon" target="_blank" href="http://www.houzz.com/pro/elmen/e-interiors"></a>
 				</div>
 				<div id="copyright">&copy; 2013 E Interiors, all rights reserved</div>
 			</div>
